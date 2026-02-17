@@ -1,4 +1,4 @@
-from enum import Enum
+from enum import Enum, StrEnum
 
 class TextType(Enum):
     TEXT = "text"
@@ -7,6 +7,11 @@ class TextType(Enum):
     CODE = "code"
     LINK = "link"
     IMAGE = "image"
+
+class TextNodeDelimiter(StrEnum):
+    BOLD = "**"
+    ITALIC = "_"
+    CODE = "`"
 
 class TextNode:
     def __init__(self, text, text_type, url=None):
